@@ -2,7 +2,7 @@ $(function () {
     var page = 1,
         pageLimit = 10,
         totalRecord = 0;
-    $('#getAll').on("click", function () {
+   function GetAll() {
         var outlook = '';
         $.ajax({
             url: "http://www.json-generator.com/api/json/get/cfFCjCzUHS?indent=2",
@@ -25,10 +25,18 @@ $(function () {
                 console.log(errorThrow);
             }
         });
-    });
+    }
+ 
     $('#List').on('click', function (event) {
         var user = event.target.id;
         console.log(user);
+        if(user === 'All'){
+            user=' ';
+            GetAll();
+
+        }
+        else{
+
         var outlook = ' ';  
         $.ajax({
             url: "http://www.json-generator.com/api/json/get/cfFCjCzUHS?indent=2",
@@ -54,6 +62,8 @@ $(function () {
                 console.log(errorThrow);
             }
         });
-    })
-
+    
+    }
     });
+
+});
