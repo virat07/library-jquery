@@ -6,7 +6,7 @@ $(document).ready(function() {
             url: "http://www.json-generator.com/api/json/get/cqGeKUifpK?indent=2",
             type: "GET",
             success:function(data){
-                    var category = data.Category;
+                    var cat = data.Category;
                     
                     for(var i =0;i<cat.length;i++){
                        
