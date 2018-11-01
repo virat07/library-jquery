@@ -6,7 +6,7 @@ $(document).ready(function() {
             url: "http://www.json-generator.com/api/json/get/cqGeKUifpK?indent=2",
             type: "GET",
             success:function(data){
-                    var cat = data.Category;
+                    var category = data.Category;
                     
                     for(var i =0;i<cat.length;i++){
                        
@@ -30,7 +30,7 @@ $(document).ready(function() {
      
         var outlook = ' ';  
         $.ajax({
-            url: "http://www.json-generator.com/api/json/get/cfFCjCzUHS?indent=2",
+            url: "http://www.json-generator.com/api/json/get/cqGeKUifpK?indent=2",
             type: 'GET',
             success: function (data) {
                 var up_user = data.book;
