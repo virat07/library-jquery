@@ -1,4 +1,28 @@
-$(function () {
+$(document).ready(function() {
+    console.log('Ready');
+        var Cat='';
+        console.log('loaded');
+        $.ajax({
+            url: "http://www.json-generator.com/api/json/get/cqGeKUifpK?indent=2",
+            type: "GET",
+            success:function(data){
+                    var cat = data.Category;
+                    
+                    for(var i =0;i<cat.length;i++){
+                       
+                        Cat +='<li id='+cat[i]+'>';
+                        Cat += cat[i];
+                        Cat += '</li>';
+                      
+                    }
+                    
+                $('#List').html(Cat);
+                  
+                    console.log(cat);
+            }
+
+        });
+   
     $('#List').on('click', function (event) {
         var user = event.target.id;
         console.log(user);
